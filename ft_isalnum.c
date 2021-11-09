@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 18:33:33 by tferreir          #+#    #+#             */
-/*   Updated: 2021/11/09 19:21:36 by tferreir         ###   ########.fr       */
+/*   Created: 2021/11/09 19:24:31 by tferreir          #+#    #+#             */
+/*   Updated: 2021/11/09 19:31:17 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+
+int	ft_alnum(int c)
 {
-	if ((c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	if (ft_isalpha(c) == 0 || ft_isdigit(c) == 0)
+		return (0);
+	return (1);
 }

@@ -9,7 +9,7 @@
 /*   Updated: 2021/11/10 19:31:43 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+// Fork Test
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

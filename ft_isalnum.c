@@ -6,16 +6,29 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:24:31 by tferreir          #+#    #+#             */
-/*   Updated: 2021/11/09 19:49:30 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:56:52 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+#include "libft.h"
 
-int	ft_alnum(int c)
+int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 0 || ft_isdigit(c) == 0)
-		return (0);
-	return (1);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
+/*
+int	main(void)
+{
+	char	c;
+
+	c = 0;
+	while (c <= 126)
+	{
+		if (ft_isalnum(c))
+			printf("c = %c -> is Alpha Numeric \n", c);
+		else
+			printf("c = %c -> NOT NOT NOT Alpha Numeric \n", c);
+		c++;
+	}
+}
+*/

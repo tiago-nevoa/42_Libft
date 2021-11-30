@@ -1,0 +1,441 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+c1r21s9.42lisboa.com
+Darwin 19.6.0 x86_64
+$> date
+Tue Nov 30 19:10:59 WET 2021
+$> gcc --version
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= libft.h=======================================================================
+$> norminette libft.h | grep -E '(Error|Warning)'
+
+= Compiling libft ==============================================================
+$> make re
+rm -f ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o ft_lstadd_back.o ft_lstadd_front.o ft_lstclear.o ft_lstdelone.o ft_lstiter.o ft_lstlast.o ft_lstmap.o ft_lstnew.o ft_lstsize.o
+rm -f libft.a
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_isalpha.o ft_isalpha.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_isdigit.o ft_isdigit.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_isalnum.o ft_isalnum.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_isascii.o ft_isascii.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_isprint.o ft_isprint.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_strlen.o ft_strlen.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_memset.o ft_memset.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_bzero.o ft_bzero.c
+gcc -Wall -Wextra -Werror -I. -std=c99   -c -o ft_memcpy.o ft_memcpy.c
+ar rcs libft.a ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_memset.o ft_bzero.o ft_memcpy.o
+make: *** No rule to make target `ft_lstadd_back.o', needed by `bonus'.  Stop.
+
+$> ls -la libft.a
+-rw-r--r--  1 tferreir  2021_lisbon  7160 Nov 30 19:11 /Users/tferreir/42_Libft/Libfttester/tmp_tests_dir/libft.a
+
+= Part1_functions ==============================================================
+
+= ft_atoi ======================================================================
+Nothing turned in
+
+= ft_bzero =====================================================================
+$> norminette ft_bzero.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_bzero/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+
+= ft_calloc ====================================================================
+Nothing turned in
+
+= ft_isalnum ===================================================================
+$> norminette ft_isalnum.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_isalnum/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isalpha ===================================================================
+$> norminette ft_isalpha.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_isalpha/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isascii ===================================================================
+$> norminette ft_isascii.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_isascii/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isdigit ===================================================================
+$> norminette ft_isdigit.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_isdigit/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isprint ===================================================================
+$> norminette ft_isprint.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_isprint/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_memccpy ===================================================================
+Nothing turned in
+
+= ft_memchr ====================================================================
+Nothing turned in
+
+= ft_memcmp ====================================================================
+Nothing turned in
+
+= ft_memcpy ====================================================================
+$> norminette ft_memcpy.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_memcpy/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+
+= ft_memmove ===================================================================
+Nothing turned in
+
+= ft_memset ====================================================================
+$> norminette ft_memset.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_memset/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+
+= ft_strchr ====================================================================
+Nothing turned in
+
+= ft_strdup ====================================================================
+Nothing turned in
+
+= ft_strlcat ===================================================================
+Nothing turned in
+
+= ft_strlcpy ===================================================================
+Nothing turned in
+
+= ft_strlen ====================================================================
+$> norminette ft_strlen.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strlen/main.c -L/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir -lft -I/Users/tferreir/42_Libft/Libfttester/tmp_tests_dir
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+
+= ft_strncmp ===================================================================
+Nothing turned in
+
+= ft_strnstr ===================================================================
+Nothing turned in
+
+= ft_strrchr ===================================================================
+Nothing turned in
+
+= ft_tolower ===================================================================
+Nothing turned in
+
+= ft_toupper ===================================================================
+Nothing turned in
+
+= Part2_functions ==============================================================
+
+= ft_itoa ======================================================================
+Nothing turned in
+
+= ft_putchar_fd ================================================================
+Nothing turned in
+
+= ft_putendl_fd ================================================================
+Nothing turned in
+
+= ft_putnbr_fd =================================================================
+Nothing turned in
+
+= ft_putstr_fd =================================================================
+Nothing turned in
+
+= ft_split =====================================================================
+Nothing turned in
+
+= ft_strjoin ===================================================================
+Nothing turned in
+
+= ft_strmapi ===================================================================
+Nothing turned in
+
+= ft_strtrim ===================================================================
+Nothing turned in
+
+= ft_substr ====================================================================
+Nothing turned in
+
+= Bonus_functions ==============================================================
+
+= ft_lstadd_back ===============================================================
+Nothing turned in
+
+= ft_lstadd_front ==============================================================
+Nothing turned in
+
+= ft_lstclear ==================================================================
+Nothing turned in
+
+= ft_lstdelone =================================================================
+Nothing turned in
+
+= ft_lstiter ===================================================================
+Nothing turned in
+
+= ft_lstlast ===================================================================
+Nothing turned in
+
+= ft_lstmap ====================================================================
+Nothing turned in
+
+= ft_lstnew ====================================================================
+Nothing turned in
+
+= ft_lstsize ===================================================================
+Nothing turned in

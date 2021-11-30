@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 20:58:02 by tferreir          #+#    #+#             */
-/*   Updated: 2021/11/30 16:48:35 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:53:01 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int	main(void)
 
 	printf("Before memcpy dest = %s\n", dst);
 	printf("After memcpy dest = %s\n", memcpy(dst, src, 5));
+	return (0);
 }
 */

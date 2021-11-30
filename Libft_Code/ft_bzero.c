@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 19:45:14 by tferreir          #+#    #+#             */
-/*   Updated: 2021/11/24 18:06:41 by tferreir         ###   ########.fr       */
+/*   Created: 2021/11/15 20:44:49 by tferreir          #+#    #+#             */
+/*   Updated: 2021/11/30 18:51:16 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	return (c > 0 && c <= 127);
+	ft_memset(s, 0, n);
 }
 /*
 int	main(void)
 {
-	char	c;
+	char	b[50] = "1584994258";
 
-	c = 0;
-	while (c <= 126)
-	{
-		if (ft_isascii(c))
-			printf("c = %c -> is ASCII \n", c);
-		else
-			printf("c = %c -> NOT NOT NOT ASCII \n", c);
-		c++;
-	}
+	printf("The String b = %s\n", b);
+	ft_bzero(b, 3);
+	printf("The String b = %s\n", b);
+	bzero(b, 3);
+	printf("The String b = %s\n", b);
 }
 */

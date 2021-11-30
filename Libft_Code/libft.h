@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:20:23 by tferreir          #+#    #+#             */
-/*   Updated: 2021/11/24 17:22:35 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/11/30 18:43:51 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 
 # include <string.h>
 # include <stdio.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
-int		ft_alnum(int c);
+int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);

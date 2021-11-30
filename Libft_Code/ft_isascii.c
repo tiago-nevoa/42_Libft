@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 19:24:31 by tferreir          #+#    #+#             */
-/*   Updated: 2021/11/24 17:56:52 by tferreir         ###   ########.fr       */
+/*   Created: 2021/11/09 19:45:14 by tferreir          #+#    #+#             */
+/*   Updated: 2021/11/30 18:05:16 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isascii(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (c >= 0 && c <= 127);
 }
 /*
 int	main(void)
@@ -24,10 +24,10 @@ int	main(void)
 	c = 0;
 	while (c <= 126)
 	{
-		if (ft_isalnum(c))
-			printf("c = %c -> is Alpha Numeric \n", c);
+		if (ft_isascii(c))
+			printf("c = %c -> is ASCII \n", c);
 		else
-			printf("c = %c -> NOT NOT NOT Alpha Numeric \n", c);
+			printf("c = %c -> NOT NOT NOT ASCII \n", c);
 		c++;
 	}
 }

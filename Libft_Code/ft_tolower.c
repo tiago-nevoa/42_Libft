@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 20:10:21 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/02 16:26:21 by tferreir         ###   ########.fr       */
+/*   Created: 2021/12/02 16:56:27 by tferreir          #+#    #+#             */
+/*   Updated: 2021/12/02 17:02:14 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		c += - 'a' + 'A';
+	if (c >= 'A' && c <= 'Z')
+		c += - 'A' + 'a';
 	return (c);
 }
 /*
@@ -26,7 +26,7 @@ int	main(void)
 	c = 0;
 	while (c <= 126)
 	{
-		printf("c = %c --> %c\n", c, ft_toupper(c));
+		printf("c = %c --> %c\n", c, ft_tolower(c));
 		c++;
 	}
 }

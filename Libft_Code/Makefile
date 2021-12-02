@@ -6,12 +6,12 @@
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:47:34 by tferreir          #+#    #+#              #
-#    Updated: 2021/11/30 18:54:30 by tferreir         ###   ########.fr        #
+#    Updated: 2021/12/02 17:03:10 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
-					ft_bzero.c ft_memcpy.c
+					ft_bzero.c ft_memcpy.c ft_toupper.c ft_tolower.c
 
 
 OBJS			= $(SRCS:.c=.o)

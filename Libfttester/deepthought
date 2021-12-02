@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c1r21s9.42lisboa.com
 Darwin 19.6.0 x86_64
 $> date
-Thu Dec  2 20:46:03 WET 2021
+Thu Dec  2 21:10:59 WET 2021
 $> gcc --version
 Apple clang version 12.0.0 (clang-1200.0.32.29)
 Target: x86_64-apple-darwin19.6.0
@@ -38,7 +38,7 @@ ar rcs libft.a ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o 
 make: *** No rule to make target `ft_lstadd_back.o', needed by `bonus'.  Stop.
 
 $> ls -la libft.a
--rw-r--r--  1 tferreir  2021_lisbon  9512 Dec  2 20:46 /Users/tferreir/42_Libft/Libfttester/tmp_tests_dir/libft.a
+-rw-r--r--  1 tferreir  2021_lisbon  9504 Dec  2 21:11 /Users/tferreir/42_Libft/Libfttester/tmp_tests_dir/libft.a
 
 = Part1_functions ==============================================================
 
@@ -327,7 +327,7 @@ $> clang -Wextra -Wall -Werror /Users/tferreir/42_Libft/Libfttester/tests/Part1_
 = Test 1 ===================================================
 $> ./user_exe 01
 $> diff -U 3 user_output_test01 test01.output
---- /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strchr/user_output_test01	2021-12-02 20:46:07.000000000 +0000$
+--- /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strchr/user_output_test01	2021-12-02 21:11:03.000000000 +0000$
 +++ /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strchr/test01.output	2021-11-30 17:28:05.000000000 +0000$
 @@ -1 +1 @@$
 -NULL$
@@ -359,7 +359,7 @@ Diff OK :D
 = Test 6 ===================================================
 $> ./user_exe 06
 $> diff -U 3 user_output_test06 test06.output
---- /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strchr/user_output_test06	2021-12-02 20:46:08.000000000 +0000$
+--- /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strchr/user_output_test06	2021-12-02 21:11:03.000000000 +0000$
 +++ /Users/tferreir/42_Libft/Libfttester/tests/Part1_functions/ft_strchr/test06.output	2021-11-30 17:28:05.000000000 +0000$
 @@ -1,2 +0,0 @@$
 -$

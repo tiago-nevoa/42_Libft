@@ -6,20 +6,39 @@
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:47:34 by tferreir          #+#    #+#              #
-#    Updated: 2021/12/08 18:05:01 by tferreir         ###   ########.fr        #
+#    Updated: 2021/12/08 18:28:01 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
-					ft_bzero.c ft_memcpy.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c
+SRCS			=	ft_isalpha.c \
+					ft_isdigit.c \
+					ft_isalnum.c \
+					ft_isascii.c \
+					ft_isprint.c \
+					ft_strlen.c \
+					ft_memset.c \
+					ft_bzero.c \
+					ft_memcpy.c \
+					ft_toupper.c \
+					ft_tolower.c \
+					ft_strchr.c \
+					ft_strrchr.c \
+					ft_strncmp.c \
+					ft_memchr.c
 
 
 
 OBJS			= $(SRCS:.c=.o)
 
-BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
-					ft_lstmap.c ft_lstnew.c ft_lstsize.c
+BONUS			=	ft_lstadd_back.c \
+					ft_lstadd_front.c \
+					ft_lstclear.c \
+					ft_lstdelone.c \
+					ft_lstiter.c \
+					ft_lstlast.c \
+					ft_lstmap.c \
+					ft_lstnew.c \
+					ft_lstsize.c
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 

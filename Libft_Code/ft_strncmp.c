@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:46:35 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/08 18:15:56 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:25:17 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,26 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
+/*
+int	main(void)
+{
+	const char	str1[15] = "abcdef";
+	const char	str2[15] = "ABCDEF";
+	int			ret;
+
+	ret = strncmp(str1, str2, 4);
+	if (ret < 0)
+	{
+		printf("str1 is less than str2");
+	}
+	else if (ret > 0)
+	{
+		printf("str2 is less than str1");
+	}
+	else
+	{
+		printf("str1 is equal to str2");
+	}
+	return (0);
+}
+*/

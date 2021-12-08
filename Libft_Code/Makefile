@@ -6,7 +6,7 @@
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:47:34 by tferreir          #+#    #+#              #
-#    Updated: 2021/12/08 18:28:01 by tferreir         ###   ########.fr        #
+#    Updated: 2021/12/08 19:03:27 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS			=	ft_isalpha.c \
 					ft_strchr.c \
 					ft_strrchr.c \
 					ft_strncmp.c \
-					ft_memchr.c
+					ft_memchr.c \
+					ft_memcmp.c
 
 
 

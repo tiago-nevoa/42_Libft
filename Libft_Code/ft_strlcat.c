@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 20:08:18 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/13 18:36:44 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/14 16:32:24 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	*dst = 0;
 	return (maxlen);
 }
-
+/*
 int	main(void)
 {
 	char			dst[30] = "Amazing";
@@ -47,3 +47,4 @@ int	main(void)
 	n = strlcat(dst, src1, 20);
 	printf("strlcat		<%s> : %zu \n", dst, n);
 }
+*/

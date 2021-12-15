@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:20:23 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/15 16:39:05 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:14:10 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -39,5 +40,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif

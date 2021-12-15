@@ -6,34 +6,47 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:36:39 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/14 18:52:26 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/15 16:41:40 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	isspace(int c)
 {
-	int	n;
-	int	index;
-
-	n = 0;
-	index = 0;
-	while (*str != '\0')
-	{
-		if (ft_isdigit(*str))
-		{
-			n = n * 10 + *str;
-			index++;
-		}
-		str++;
-	}
-	return (n);
+	if (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ')
+		return (1);
+	else
+		return (0);
 }
 
+int	ft_atoi(const char *str)
+{
+	long	n;
+	int		sign;
+
+	n = 0;
+	sign = 1;
+	while (isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign *= -1;
+		str++;
+	}
+	while (ft_isdigit(*str))
+	{
+		n = n * 10 + (*str - '0');
+		str++;
+	}
+	return (sign * (int)n);
+}
+/*
 int	main(void)
 {
-	const char	*str = "1234567";
+	const char	*str = "  			10012df34567";
 	int			i;
 
 	i = ft_atoi(str);
@@ -41,3 +54,4 @@ int	main(void)
 	i = atoi(str);
 	printf("str = <%s>;\natoi(str) = <%d>", str, i);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 16:20:23 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/16 13:15:00 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:10:59 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

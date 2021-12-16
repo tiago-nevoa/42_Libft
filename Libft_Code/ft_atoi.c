@@ -6,13 +6,13 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 16:36:39 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/15 16:41:40 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/16 15:15:26 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isspace(int c)
+static int	isspace(int c)
 {
 	if (c == '\t' || c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r' || c == ' ')

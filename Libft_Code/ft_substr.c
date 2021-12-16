@@ -1,40 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/16 12:34:29 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/16 13:35:50 by tferreir         ###   ########.fr       */
+/*   Created: 2021/12/16 15:10:23 by tferreir          #+#    #+#             */
+/*   Updated: 2021/12/16 15:58:43 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*p;
-	size_t	len;
-	int		i;
+	char			*p;
+	unsigned int	i;
+	size_t			s_len;
 
-	len = ft_strlen(s1);
 	i = 0;
+	s_len = ft_strlen(s);
+	if (!s)
+		return (NULL);
+	if (len > s_len)
+		len = s_len;
 	p = malloc(sizeof(char) * (len + 1));
 	if (!p)
 		return (NULL);
-	ft_strlcpy(p, s1, len + 1);
+	if (s_len > start)
+	{
+		while (i < len && s[start + i] != '\0')
+		{
+			p[i] = s[start + i];
+			i++;
+		}
+	}
 	return (p);
 }
 /*
 int	main(void)
 {
-	const char	src[] = "My Friends";
-	char		*dst1;
-	char		*dst2;
+	char		*dst;
+	const char	src[] = "Machines will destroy the world";
 
-	dst1 = ft_strdup(src);
-	dst2 = strdup(src);
-	printf("Res <%s>\nOri <%s>\n", dst1, dst2);
+	dst = ft_substr(src, 5, ft_strlen(src));
+	printf("Res <%s>\n", dst);
 }
 */

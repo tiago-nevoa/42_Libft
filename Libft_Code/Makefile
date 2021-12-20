@@ -6,7 +6,7 @@
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:47:34 by tferreir          #+#    #+#              #
-#    Updated: 2021/12/20 12:29:21 by tferreir         ###   ########.fr        #
+#    Updated: 2021/12/20 17:03:24 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,9 @@ SRCS			=	ft_isalpha.c \
 					ft_strdup.c \
 					ft_substr.c \
 					ft_strjoin.c \
-					ft_strtrim.c
+					ft_strtrim.c \
+					ft_itoa.c \
+					ft_strmapi.c
 
 OBJS			= $(SRCS:.c=.o)
 

@@ -1,46 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ft_strmapi.c                                      :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/20 16:29:49 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/20 17:02:38 by tferreir         ###   ########.fr       */
+/*   Created: 2021/12/20 17:54:57 by tferreir          #+#    #+#             */
+/*   Updated: 2021/12/20 18:22:49 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	char			*str;
 
-	str = (char *)malloc(sizeof(char) * (int)ft_strlen(s) + 1);
-	if (!str)
-		return (0);
 	i = 0;
 	while (s[i] != '\0')
 	{
-		str[i] = f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
 }
 /*
-char	my_func(unsigned int i, char str)
+void	my_func(unsigned int i, char *str)
 {
 	(void) i;
-	return (str - 32);
+	*str -= 32;
 }
 
 int	main(void)
 {
-	char str[10] = "helloz";
+	const char	str[10] = "hello.";
+
 	printf("Original: <%s>\n", str);
-	char *result = ft_strmapi(str, my_func);
-	printf("Result: <%s>\n", result);
-return (0);
-}*/
+	ft_striteri(str, my_func);
+	printf("Result: <%s>\n", str);
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 15:10:23 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/20 17:02:28 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/20 20:17:35 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			i++;
 		}
 	}
+	p[i] = '\0';
 	return (p);
 }
 /*

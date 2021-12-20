@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 14:56:54 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/07 16:19:14 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/20 20:10:07 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + i));
 	while (i-- > 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)(s + i));
 	}
 	return (NULL);

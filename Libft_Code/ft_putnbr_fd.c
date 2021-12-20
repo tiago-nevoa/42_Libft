@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/20 12:35:57 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/20 17:02:34 by tferreir         ###   ########.fr       */
+/*   Created: 2021/12/20 18:41:19 by tferreir          #+#    #+#             */
+/*   Updated: 2021/12/20 18:54:13 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	return (0);
+	ft_putstr_fd(ft_itoa(n), fd);
 }

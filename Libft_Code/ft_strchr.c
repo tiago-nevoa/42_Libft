@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:54:25 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/07 16:19:05 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/20 19:37:39 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)(s + i));
 		i++;
 	}
@@ -30,11 +30,11 @@ char	*ft_strchr(const char *s, int c)
 /*
 int	main(void)
 {
-	const char	src[20] = "0123456789";
+	char	src[] = "tripouille";
 
 	printf("Before strchr dest = %s\n", src);
-	printf("After ft_strchr dest = %s\n", ft_strchr(src, '0'));
-	printf("After strchr dest = %s\n", strchr(src, '0'));
+	printf("After ft_strchr dest = %s\n", ft_strchr(src, 't' + 256));
+	printf("After strchr dest = %s\n", strchr(src, 't' + 256));
 	return (0);
 }
 */

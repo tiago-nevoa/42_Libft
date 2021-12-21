@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:23:54 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/20 17:02:29 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:00:51 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = -1;
 	j = -1;
 	s1_len = ft_strlen(s1);

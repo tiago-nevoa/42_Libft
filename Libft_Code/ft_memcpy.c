@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 20:58:02 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/09 19:28:02 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/21 17:25:01 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*d;
 	const char	*s;
 
+	if (!dst && !src)
+		return (NULL);
 	d = dst;
 	s = src;
 	while (n-- > 0)

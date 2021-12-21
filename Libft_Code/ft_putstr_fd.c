@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 18:19:19 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/20 18:26:44 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:29:42 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (*s)
+	if (s)
 		write(fd, s, ft_strlen(s));
 }

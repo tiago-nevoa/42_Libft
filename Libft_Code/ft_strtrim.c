@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:56:03 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/20 17:02:32 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/21 18:06:02 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	begin;
 	unsigned int	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	if (s1_len == 0)
 		return (ft_strdup(""));

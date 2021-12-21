@@ -6,7 +6,7 @@
 /*   By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 18:02:44 by tferreir          #+#    #+#             */
-/*   Updated: 2021/12/15 20:12:13 by tferreir         ###   ########.fr       */
+/*   Updated: 2021/12/21 17:23:49 by tferreir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
-	int		i;
 
-	i = 0;
 	p = (void *)malloc(size * count);
 	if (!p)
 		return (NULL);

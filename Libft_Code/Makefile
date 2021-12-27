@@ -6,7 +6,7 @@
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:47:34 by tferreir          #+#    #+#              #
-#    Updated: 2021/12/27 16:18:14 by tferreir         ###   ########.fr        #
+#    Updated: 2021/12/27 16:23:44 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,6 @@ SRCS			=	ft_isalpha.c \
 					ft_putendl_fd.c \
 					ft_putnbr_fd.c
 
-
 OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc
@@ -57,7 +56,7 @@ CFLAGS			= -Wall -Wextra -Werror -I. -std=c99
 NAME			= libft.a
 
 .c.o:
-	$(CC) (CFLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)

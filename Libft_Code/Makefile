@@ -6,7 +6,7 @@
 #    By: tferreir <tferreir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/30 17:47:34 by tferreir          #+#    #+#              #
-#    Updated: 2021/12/27 16:23:44 by tferreir         ###   ########.fr        #
+#    Updated: 2022/02/09 16:48:09 by tferreir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ CC				= gcc
 
 RM				= rm -f
 
-CFLAGS			= -Wall -Wextra -Werror -I. -std=c99
+CFLAGS			= -Wall -Wextra -Werror -I.
 
 NAME			= libft.a
 
